@@ -1,0 +1,110 @@
+/* Navbar */
+.fw-bold:hover{
+ font-weight: bold;
+ padding: 10px;
+}
+.nav-link{
+    font-style: italic;
+}
+
+/* Hero section with full image (no crop) */
+.about-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.about-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay "About" text on image */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-family: serif;
+  font-weight: bold;
+}
+
+
+/* Content Section */
+.about-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.section-content {
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: start;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .overlay-text {
+    font-size: 32px;
+  }
+
+  .section-content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay-text {
+    font-size: 24px;
+  }
+
+  .section-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Footer */
+    .footer {
+    background-color:white;
+    color: black;
+}
+
+.footer-links a {
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff6b6b;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(109, 79, 79, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0b0b0b;
+    transform: translateY(-3px);
+}
+i {
+  color: rgb(246, 96, 42);
+}
