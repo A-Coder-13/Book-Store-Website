@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+      <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="assest/bootstrap/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a9d22;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b00;
+            --text-dark: #333;
+            --text-light: #6c757d;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* Header styles */
+        .hero {
+            background: url('h2_hero2.jpg.webp');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .text-overlay {
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            padding: 30px 15px;
+        }
+        
+        .p1 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .p1 a {
+            color: orangered;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .p1 a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Form styles */
+        .form-control, .form-select {
+            padding: 12px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color:none;
+            box-shadow: 0 0 0 0.2rem rgb(243, 161, 131);
+            outline: none;
+        }
+        
+        /* Button styles */
+        .btn1, .btn2, .btn3 {
+            padding: 10px 20px;
+            border: none;
+            /* border-radius: 4px; */
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn1 {
+            background-color: orangered;
+            border-radius:50px ;
+            width:100px ;
+            padding:10px 10px 10px 10px ;
+            color: white;
+        }
+        
+        .btn2 {
+            background-color:orangered;
+            color: white;
+            border-radius:50px ;
+            width:100px ;
+            padding:10px 10px 10px 10px ;
+        }
+        
+        .btn3 {
+            background-color:orangered;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border-radius:50px ;
+        }
+        
+        .btn1:hover, .btn2:hover, .btn3:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        /* Order summary */
+        .order-summary {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+        
+        .order-summary h5 {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            font-weight: 700;
+        }
+        
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .list-group-item.total {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            border-bottom: none;
+        }
+        
+        .form-check-label {
+            margin-left: 10px;
+        }
+        
+        .orderpara {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 10px 0 15px 25px;
+        }
+        
+        .term {
+            color: orangered;
+            font-weight: 600;
+        }
+        
+        /* Footer styles */
+        /* .footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        } */
+        .footer {
+  background-color:white;
+  color: black;
+}
+
+.footer-links a {
+  color:black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff6b6b;
+}
+i{
+    /* color: rgb(246, 96, 42); */
+    color:black ;
+    
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(109, 79, 79, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  /* background-color: #1d1c1c; */
+  background-color:orangered;
+  transform: translateY(-3px);
+}
+
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .hero {
+                height: 200px;
+            }
+            
+            .text-overlay {
+                font-size: 2.5rem;
+            }
+            
+            .order-summary {
+                margin-top: 40px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero {
+                height: 180px;
+            }
+            
+            .text-overlay {
+                font-size: 2rem;
+            }
+            
+            .divone {
+                flex-direction: column;
+            }
+            
+            .col1, .col2 {
+                width: 100% !important;
+                margin-right: 0 !important;
+            }
+            
+            .btn1 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .hero {
+                height: 150px;
+            }
+            
+            .text-overlay {
+                font-size: 1.8rem;
+            }
+            
+            .p1 {
+                font-size: 1rem;
+            }
+            
+            .form-control, .form-select {
+                padding: 10px;
+            }
+        }
+        
+        /* Custom spacing */
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .divone {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .col1 {
+            width: 48%;
+            margin-right: 4%;
+        }
+        
+        .col2 {
+            width: 48%;
+        }
+        
+        .address1 {
+            margin-bottom: 20px;
+        }
+        
+        .custom-checkbox {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        
+        .form-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body> 
+  <header>
+<nav class="navbar bg-white shadow-sm py-3">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+ 
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png.webp" alt="Logo" width="110" class="me-2">
+    </a>
+
+   
+    <form class="d-flex w-50" role="search">
+      <input class="form-control me-2 rounded-pill" type="search" placeholder="Search book by author or publisher" aria-label="Search" />
+      <button class="btn btn-outline-danger rounded-pill" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="#">Categories</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="#">About</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="index.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <script src="assest/bootstrap/bootstrap.bundle.min.js"></script>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="text-overlay">
+        Checkout
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="form-section">
+            <span class="span1">
+              <p class="p1">Returning Customer?
+              <a href="#">Click here to login</a></p>
+            </span>
+            <p class="mb-20">If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.</p>
+            
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <input type="text" class="form-control" placeholder="Username or email*">
+              </div>
+              <div class="col-md-6">
+                <input type="password" class="form-control" placeholder="Password*">
+              </div>
+            </div>
+            
+            <div class="d-flex flex-column flex-md-row align-items-center">
+              <button class="btn1 me-md-3 mb-3 mb-md-0">Login</button>
+              <div class="d-flex align-items-center">
+                <input type="checkbox" class="custom-checkbox">
+                <span>Remember me</span>
+              </div>
+            </div>
+            
+            <p class="p1 mt-4">Have a coupon? <a href="#">Click here to enter a code</a></p>
+            <div class="d-flex">
+              <input type="text" class="form-control me-2" placeholder="Enter coupon code*">
+              <button class="btn2">Apply</button>
+            </div>
+          </div>
+          
+          <div class="form-section">
+            <h5 class="mb-4">Billing Details</h5>
+            <form>
+              <div class="divone">
+                <div class="col1">
+                  <input type="text" class="form-control" placeholder="First name *">
+                </div>
+                <div class="col2">
+                  <input type="text" class="form-control" placeholder="Last name *">
+                </div>
+              </div>
+              
+              <input type="text" class="form-control" placeholder="Company name">
+              <input type="tel" class="form-control" placeholder="Phone number *">
+              <input type="email" class="form-control" placeholder="Email address *">
+              
+              <select class="form-select">
+                <option>Select Country</option>
+                <option>Pakistan</option>
+                <option>Turkey</option>
+                <option>Saudi Arabia</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+              </select>
+              
+              <div class="address1">
+                <input type="text" class="form-control" placeholder="Address line 1*">
+                <input type="text" class="form-control" placeholder="Address line 2">
+                <input type="text" class="form-control" placeholder="City/Town*">
+                
+                <select class="form-select">
+                  <option>Select District</option>
+                  <option>West</option>
+                  <option>East</option>
+                  <option>South</option>
+                  <option>North</option>
+                </select>
+                
+                <input type="text" class="form-control mt-3" placeholder="Postcode/Zip*">
+              </div>
+              
+              <div class="form-check mb-4">
+                <input class="form-check-input custom-checkbox" type="checkbox">
+                <label class="form-check-label">
+                  Create an account
+                </label>
+              </div>
+              
+              <h5 class="mb-4">Shipping Details</h5>
+              <div class="form-check mb-4">
+                <input class="form-check-input custom-checkbox" type="checkbox">
+                <label class="form-check-label">
+                  Ship to a different address?
+                </label>
+              </div>
+              
+              <div class="mb-4">
+                <label for="orderNotes" class="form-label">Order Notes</label>
+                <textarea class="form-control" id="orderNotes" rows="4" placeholder="Notes about your order..."></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="order-summary">
+            <h5>Your Order</h5>
+            <ul class="list-group mb-4">
+              <li class="list-group-item">
+                <span>Fresh Blackberry &nbsp;&nbsp; x02</span>
+                <span>$720.00</span>
+              </li>
+              <li class="list-group-item">
+                <span>Fresh Tomatoes &nbsp;&nbsp; x02</span>
+                <span>$720.00</span>
+              </li>
+              <li class="list-group-item">
+                <span>Fresh Broccoli &nbsp;&nbsp; x02</span>
+                <span>$720.00</span>
+              </li>
+              <li class="list-group-item">
+                <span>Shipping</span>
+                <span>$50.00</span>
+              </li>
+              <li class="list-group-item total">
+                <span>Total</span>
+                <strong>$2210.00</strong>
+              </li>
+            </ul>
+            
+            <div class="payment-methods">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="payment" id="checkPayment">
+                <label class="form-check-label" for="checkPayment">
+                  Check Payments
+                </label>
+                <p class="orderpara">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+              </div>
+              
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="radio" name="payment" id="paypal">
+                <label class="form-check-label" for="paypal">
+                  PayPal
+                </label>
+                <p class="orderpara">Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
+              </div>
+              
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="terms">
+                <label class="form-check-label" for="terms">
+                  I've read and accept the <a href="#" class="term">terms & conditions</a>
+                </label>
+              </div>
+              
+              <button class="btn3">Proceed to Paypal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+              <img src="logo.png.webp">
+              <br>
+              <br>
+                <!-- <h4 class="text-black mb-4">ABCBook</h4> -->
+                <p>Your one-stop shop for all your reading needs. We offer a wide selection of books across all genres at competitive prices.</p>
+                <div class="mt-4">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <h5 class="text-black mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="#">Home</a></li>
+                    <li class="mb-2"><a href="#">About Us</a></li>
+                    <li class="mb-2"><a href="#">Shop</a></li>
+                    <li class="mb-2"><a href="#">Blog</a></li>
+                    <li class="mb-2"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <h5 class="text-black mb-4">Categories</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="#">History</a></li>
+                    <li class="mb-2"><a href="#">Horror - Thriller</a></li>
+                    <li class="mb-2"><a href="#">Science Fiction</a></li>
+                    <li class="mb-2"><a href="#">Business</a></li>
+                    <li class="mb-2"><a href="#">Biography</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-2">
+                <h5 class="text-black mb-4">Contact Info</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Book Street, Library City, LC 12345</li>
+                    <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (234) 567-8900</li>
+                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@abcbook.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="mt-5 bg-light">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2025 ABCBook. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by ABCBook Team</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+  <!-- <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <img src="https://via.placeholder.com/200x60.png?text=LOGO" alt="Company Logo" class="mb-3">
+          <p>Your one-stop shop for all your reading needs. We offer a wide selection of books across all genres at competitive prices.</p>
+          <div class="mt-4">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="#">Home</a></li>
+            <li class="mb-2"><a href="#">About Us</a></li>
+            <li class="mb-2"><a href="#">Shop</a></li>
+            <li class="mb-2"><a href="#">Blog</a></li>
+            <li class="mb-2"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-3 mb-4">
+          <h5>Categories</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="#">History</a></li>
+            <li class="mb-2"><a href="#">Horror - Thriller</a></li>
+            <li class="mb-2"><a href="#">Science Fiction</a></li>
+            <li class="mb-2"><a href="#">Business</a></li>
+            <li class="mb-2"><a href="#">Biography</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Book Street, Library City, LC 12345</li>
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (234) 567-8900</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@abcbook.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="mt-5 bg-light">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-0">&copy; 2025 ABCBook. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by ABCBook Team</p>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
