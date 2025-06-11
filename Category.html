@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Navbar */
+.fw-bold:hover{
+ font-weight: bold;
+ padding: 10px;
+}
+.nav-link{
+    font-style: italic;
+}
+        body {
+            font-family: serif;
+        }
+
+        /* Cards */
+        .card {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-title,
+        h4 {
+            font-family: "Oranienbaum", serif;
+            font-weight: bold;
+            color: Red;
+        }
+
+        i {
+            color: rgb(246, 96, 42);
+        }
+
+        .image-box {
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        select {
+            /* padding: 7px 90px; */
+            border-radius: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.178);
+            outline: none;
+        }
+
+        .fil {
+            height: fit-content;
+            padding: 40px 35px;
+            border: 1px solid rgba(128, 128, 128, 0.178);
+        }
+
+        /* Browse */
+        .Browse:hover {
+            color: #ffffff;
+            border-color: #ff1666;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b6b;
+        }
+
+        i {
+            color: rgb(246, 96, 42);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(109, 79, 79, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #1d1c1c;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+  <!-- Header Start -->
+  <nav class="navbar bg-white shadow-sm py-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Assests/Images/logo.png.webp" alt="Logo" width="110" class="me-2">
+      </a>
+      <form class="d-flex w-50" role="search">
+        <input class="form-control me-2 rounded-pill" type="search" placeholder="Search book by author or publisher" aria-label="Search" />
+        <button class="btn btn-outline-danger rounded-pill" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Home</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Categories</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">About</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="blog.html">Blog</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header End -->
+
+Css
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="row"
+            style="background-image: url(assets/Image/Hero.webp); height: 300px; display: flex; text-align: center; align-items: center;">
+            <div class="col">
+                <h1 class="text-light" style="font-size: 50px;">Book Catogeries</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Section 2  Container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-5 fil">
+                <div class="category-listing mb-5 col-12">
+                    <div class="select-categories pb-5">
+                        <h4 class="mb-3 text-dark fs-5">Filter by Genres</h4>
+                        <!-- Filter labels -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                History
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Horror-Thriller
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Love Story
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Science Fiction
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Biography
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="filter-bar mb-5 col-12">
+                    <h4 class="mb-3 text-dark fs-5">Filter by Price</h4>
+                    <input type="range" class="form-range" id="customRange1">
+                </div>
+                <div class="Filter-rating mb-5 col-12 d-flex justify-content-center">
+                    <select class="w-75 p-2">
+                        <option value="">Filter by Rating</option>
+                        <option>5 Stare Rating</option>
+                        <option>4 Stare Rating</option>
+                        <option>3 Stare Rating</option>
+                        <option>2 Stare Rating</option>
+                        <option>1 Stare Rating</option>
+                    </select>
+                </div>
+                <div class="Publisher-listing mb-5 col-12">
+                    <div class="select-categories pb-5">
+                        <h4 class="mb-3 text-dark fs-5">Filter by Publisher</h4>
+                        <!-- Filter labels -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Green Publications
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Rinku Publications
+
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Anando Publications
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Red Publications
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Read Publications
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="author-listing mb-5 col-12">
+                    <div class="select-categories pb-5">
+                        <h4 class="mb-3 text-dark fs-5">Filter by Author</h4>
+                        <!-- Filter labels -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                phyl Harmonic
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Jhone Doe
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Vicks mardon
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Otto Matic
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Jhone Annato
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8 pt84 mt-5">
+                <div class="contain">
+                    <div class=" row justify-content-end">
+                        <div class="Filter-popularity  col-12 col-lg-4 col-md-4 col-xl-4 col-xxl-4 mb-5 ">
+                            <select class="px-4 py-2 ">
+                                <option value=""><b>Browse by Popularity</b></option>
+                                <option>Name</option>
+                                <option>New</option>
+                                <option>Old</option>
+                                <option>Price</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <!-- Card 1 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/moon Dance.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card2 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/Moon.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card3 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/Red plant.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card4 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/4.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card5 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card6 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card7 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card8 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card9 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/9.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 1 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/moon Dance.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card2 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/Moon.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card3 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/Red plant.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card4 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/4.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card5 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card6 -->
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
+                            <div class="card">
+                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Moon Dance</h5>
+                                    <p class="card-text">J.R Rain</p>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <p>(120 Review) $50</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="#" class="Browse text-decoration-none"
+                            style="background-color:#ffffff; color: #ff1666; width: 170px; padding: 10px 35px; border-radius: 25px; margin: 40px 0px; border: 2px solid #ff1666;">
+                            Browse more </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Section 3  Container-->
+    <div class="container">
+        <div class="row justify-content-center text-center align-items-center"
+            style="background-image: url(assets/Image/section\ 3.webp);">
+            <div class="col-md-9 col-lg-8 col-xl-6 py-5 px-2 ">
+                <div>
+                    <h1 class="text-light">Join Newsletter</h1>
+                    <p class="text-secondary">Lorem started its journey with cast iron (CI) products in 1980. The
+                        initial main objective was to ensure pure water and affordable irrigation.</p>
+                    <div class="container">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input type="email" placeholder="Enter your Email"
+                                style="padding: 7px; border-radius: 25px; border: none; outline: none;">
+                            <a href="#" class="  text-light text-decoration-none"
+                                style="background-color: #ff1666; width: 130px; padding: 7px; border-radius: 25px; margin-left: 7px;">
+                                Submit </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap of Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">ABCBook</h4>
+                    <p>Your one-stop shop for all your reading needs. We offer a wide selection of books across all
+                        genres at competitive prices.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h5 class="text-black mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="#">About Us</a></li>
+                        <li class="mb-2"><a href="#">Shop</a></li>
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h5 class="text-black mb-4">Categories</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">History</a></li>
+                        <li class="mb-2"><a href="#">Horror - Thriller</a></li>
+                        <li class="mb-2"><a href="#">Science Fiction</a></li>
+                        <li class="mb-2"><a href="#">Business</a></li>
+                        <li class="mb-2"><a href="#">Biography</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-2">
+                    <h5 class="text-black mb-4">Contact Info</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Book Street, Library City, LC
+                            12345</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (234) 567-8900</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@abcbook.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 ABCBook. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by ABCBook Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="assets/Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
