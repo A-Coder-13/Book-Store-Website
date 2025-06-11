@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Page 2</title>
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="assest/bootstrap/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav class="navbar bg-white shadow-sm py-3">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+ 
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="assest/img/logo.png.webp" alt="Logo" width="110" class="me-2">
+    </a>
+
+   
+    <form class="d-flex w-50" role="search">
+      <input class="form-control me-2 rounded-pill" type="search" placeholder="Search book by author or publisher" aria-label="Search" />
+      <button class="btn btn-outline-danger rounded-pill" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="#">Categories</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="#">About</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link fw-bold text-dark" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section>
+    <img src="assest/img/P2.jpeg" class="img-fluid w-100" style="height: 400px; object-fit: cover;" alt="Banner Image">
+  </section>
+
+  <section class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/book1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Moon</h5>
+            <p class="card-text">A silent guardian in silver grace,
+The moon watches dreams in night's embrace....</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/mmm.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Living The Memories..</h5>
+            <p class="card-text"> Living in the memory, not the day,
+Where echoes of yesterday softly stay....</p>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/light.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Memory Of Light.</h5>
+            <p class="card-text"> A memory of light in shadows cast,
+A golden gleam from a fading past....</p>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/read1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Light house.</h5>
+            <p class="card-text">A lighthouse stands through storm and night,
+A steadfast soul casting hope in light....</p>
+          </div>
+        </div>
+      </div>
+        <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/rd.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Reflection Of Destiny</h5>
+            <p class="card-text">Reflection of destiny in still water lies,
+A path foretold beneath silent skies....</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assest/img/sp.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Destiny....</h5>
+            <p class="card-text">ChatGPT said:
+Destiny walks with unseen thread,
+We follow paths that dreams have led....</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+  <!-- pagination -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="pag1.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="blog.html">Home</a></li>
+    <li class="page-item "><a class="page-link" href="pag1.html">1</a></li>
+    <li class="page-item active"><a class="page-link" href="pag2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="pag3.html">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap of Footer -->
+    <footer class="footer py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h4 class="text-white mb-4">ABCBook</h4>
+                <p>Your one-stop shop for all your reading needs. We offer a wide selection of books across all genres at competitive prices.</p>
+                <div class="mt-4">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <h5 class="text-black mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="#">Home</a></li>
+                    <li class="mb-2"><a href="#">About Us</a></li>
+                    <li class="mb-2"><a href="#">Shop</a></li>
+                    <li class="mb-2"><a href="#">Blog</a></li>
+                    <li class="mb-2"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <h5 class="text-black mb-4">Categories</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="#">History</a></li>
+                    <li class="mb-2"><a href="#">Horror - Thriller</a></li>
+                    <li class="mb-2"><a href="#">Science Fiction</a></li>
+                    <li class="mb-2"><a href="#">Business</a></li>
+                    <li class="mb-2"><a href="#">Biography</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-2">
+                <h5 class="text-black mb-4">Contact Info</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Book Street, Library City, LC 12345</li>
+                    <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (234) 567-8900</li>
+                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@abcbook.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="mt-5 bg-light">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2025 ABCBook. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by ABCBook Team</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
