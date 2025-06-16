@@ -5,102 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assest/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Navbar */
-.fw-bold:hover{
- font-weight: bold;
- padding: 10px;
-}
-.nav-link{
-    font-style: italic;
-}
-        body {
-            font-family: serif;
-        }
-
-        /* Cards */
-        .card {
-            width: 100%;
-            height: 100%;
-        }
-
-        .card-title,
-        h4 {
-            font-family: "Oranienbaum", serif;
-            font-weight: bold;
-            color: Red;
-        }
-
-        i {
-            color: rgb(246, 96, 42);
-        }
-
-        .image-box {
-            width: 300px;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        select {
-            /* padding: 7px 90px; */
-            border-radius: 20px;
-            border: 1px solid rgba(128, 128, 128, 0.178);
-            outline: none;
-        }
-
-        .fil {
-            height: fit-content;
-            padding: 40px 35px;
-            border: 1px solid rgba(128, 128, 128, 0.178);
-        }
-
-        /* Browse */
-        .Browse:hover {
-            color: #ffffff;
-            border-color: #ff1666;
-        }
-
-        .footer {
-            background-color: white;
-            color: black;
-        }
-
-        .footer-links a {
-            color: black;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #ff6b6b;
-        }
-
-        i {
-            color: rgb(246, 96, 42);
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(109, 79, 79, 0.1);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            transition: all 0.3s;
-        }
-
-        .social-icon:hover {
-            background-color: #1d1c1c;
-            transform: translateY(-3px);
-        }
-    </style>
+    <link rel="stylesheet" href="catogeries.css">
 </head>
 
 <body>
@@ -109,7 +18,7 @@
   <nav class="navbar bg-white shadow-sm py-3">
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="Assests/Images/logo.png.webp" alt="Logo" width="110" class="me-2">
+        <img src="assest/img/logo.png.webp" alt="Logo" width="110" class="me-2">
       </a>
       <form class="d-flex w-50" role="search">
         <input class="form-control me-2 rounded-pill" type="search" placeholder="Search book by author or publisher" aria-label="Search" />
@@ -128,22 +37,21 @@
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Home</a></li>
-          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Categories</a></li>
-          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">About</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="Home.html">Home</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="Category.html">Categories</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="About.html">About</a></li>
           <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="blog.html">Blog</a></li>
-          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="#">Contact</a></li>
+          <li class="nav-item px-3"><a class="nav-link fw-bold text-dark" href="index.html">Checkout</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- Header End -->
 
-Css
     <!-- Hero Section -->
     <div class="container">
         <div class="row"
-            style="background-image: url(assets/Image/Hero.webp); height: 300px; display: flex; text-align: center; align-items: center;">
+            style="background-image: url(assest/img/Hero.webp); height: 300px; display: flex; text-align: center; align-items: center;">
             <div class="col">
                 <h1 class="text-light" style="font-size: 50px;">Book Catogeries</h1>
             </div>
@@ -297,7 +205,7 @@ Css
                         <!-- Card 1 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/moon Dance.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/moon Dance.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -313,7 +221,7 @@ Css
                         <!-- card2 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/Moon.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/Moon.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -330,7 +238,7 @@ Css
                         <!-- card3 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/Red plant.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/Red plant.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -347,7 +255,7 @@ Css
                         <!-- card4 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/4.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/4.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -364,7 +272,7 @@ Css
                         <!-- card5 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/8.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -381,7 +289,7 @@ Css
                         <!-- card6 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/6.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -397,7 +305,7 @@ Css
                         <!-- card7 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/8.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -413,7 +321,7 @@ Css
                         <!-- card8 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/6.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -429,7 +337,7 @@ Css
                         <!-- card9 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/9.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/9.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -445,7 +353,7 @@ Css
                         <!-- Card 1 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/moon Dance.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/moon Dance.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -461,7 +369,7 @@ Css
                         <!-- card2 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/Moon.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/Moon.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -478,7 +386,7 @@ Css
                         <!-- card3 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/Red plant.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/Red plant.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -495,7 +403,7 @@ Css
                         <!-- card4 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/4.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/4.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -512,7 +420,7 @@ Css
                         <!-- card5 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/8.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/8.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -529,7 +437,7 @@ Css
                         <!-- card6 -->
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 d-flex justify-content-center mb-4">
                             <div class="card">
-                                <img src="assets/Image/6.webp" class="card-img-top" alt="..." />
+                                <img src="assest/img/6.webp" class="card-img-top" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">Moon Dance</h5>
                                     <p class="card-text">J.R Rain</p>
@@ -556,7 +464,7 @@ Css
     <!-- Section 3  Container-->
     <div class="container">
         <div class="row justify-content-center text-center align-items-center"
-            style="background-image: url(assets/Image/section\ 3.webp);">
+            style="background-image: url(assest/img/section\ 3.webp);">
             <div class="col-md-9 col-lg-8 col-xl-6 py-5 px-2 ">
                 <div>
                     <h1 class="text-light">Join Newsletter</h1>
@@ -597,7 +505,7 @@ Css
                         <li class="mb-2"><a href="#">About Us</a></li>
                         <li class="mb-2"><a href="#">Shop</a></li>
                         <li class="mb-2"><a href="#">Blog</a></li>
-                        <li class="mb-2"><a href="#">Contact</a></li>
+                        <li class="mb-2"><a href="index.html">Checkout</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-2">
@@ -634,7 +542,7 @@ Css
 
 
 
-    <script src="assets/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assest/Bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

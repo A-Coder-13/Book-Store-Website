@@ -117,39 +117,6 @@ i {
   object-fit: cover;
 } 
 
-/* Newsletter Section */
- .newsletter-section {
-  background-image: url('Assests/Images/section5-img.webp');
-  background-size: cover;
-  background-position: center;
-  background-color: #f8f9fa;
-  padding: 80px 0;
-  color:white;
-  text-align: center;
-  margin: 100px 100px;
-} 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .carousel-item {
-    padding: 0 20px;
-    height: 400px;
-  }
-
-  .heading1 {
-    font-size: 30px;
-  }
-
-  .btn1, .btn2 {
-    margin: 10px 0;
-    font-size: 14px;
-  }
-
-  .image-box {
-    width: 250px;
-    height: 350px;
-  }
-}
 
 /* Footer Section */
     .footer {
